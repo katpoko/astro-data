@@ -1,0 +1,26 @@
+---
+// import
+const dataSource = "https://gist.githubusercontent.com/ewuweblab/b8c52837370e6e39b3603dea2d0f6a07/raw/ee24073bada30f1a99b1bdfde81e05d389eb120e/emojiHolidays.json"
+// get data
+const response = await fetch(dataSource);
+// make working copy of data
+const emojiHolidays = await response.json();
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>EXTERNAL data</title>
+    <style>
+      h1 {
+        font-size: 8rem;
+      }
+    </style>
+  </head>
+  <body>
+    {emojiHolidays.map((emoji) => <h1>{emoji}</h1>)}
+  </body>
+</html>

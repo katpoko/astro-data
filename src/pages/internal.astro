@@ -1,0 +1,28 @@
+---
+const emojiHolidays = ["☘️", "🐰", "🎆", "🎃", "🎄"];
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>INTERNAL data</title>
+    <style>
+      h1 {
+        font-size: 8rem;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- {emojiHolidays.map((emoji) => <h1>{emoji.name}</h1>)} -->
+
+    {
+      emojiHolidays.map((emoji) => {
+        <h1>{emoji}</h1>;
+      
+    })
+    }
+  </body>
+</html>
